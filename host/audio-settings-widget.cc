@@ -114,7 +114,7 @@ void AudioSettingsWidget::updateSampleRateList() {
    bool didSelectSampleRate = false;
    auto deviceIds = _audio->getDeviceIds();
    const auto index = _deviceChooser->currentIndex();
-   if (index != -1)
+   if (index == -1)
       return;
 
    auto info = _audio->getDeviceInfo(deviceIds[index]);
